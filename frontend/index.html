@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprite Write!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="app-title">
+            Sprite Write!
+            <svg class="title-sprite" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0" y="10" width="16" height="6" fill="#008000" />
+                <rect x="5" y="5" width="6" height="5" fill="#1e90ff" />
+                <rect x="2" y="6" width="2" height="4" fill="#1e90ff" />
+                <rect x="12" y="6" width="2" height="4" fill="#1e90ff" />
+                <rect x="1" y="7" width="1" height="3" fill="#1e90ff" />
+                <rect x="14" y="7" width="1" height="3" fill="#1e90ff" />
+                <rect x="0" y="8" width="1" height="2" fill="#1e90ff" />
+                <rect x="15" y="8" width="1" height="2" fill="#1e90ff" />
+                <rect x="6" y="4" width="4" height="1" fill="#ff69b4" />
+            </svg>
+        </div>
+        <div class="canvas" id="canvas">
+            <!-- The canvas will be created here by JavaScript -->
+        </div>
+        <div class="palette-container" id="palette">
+            <!-- The color palette will be created here by JavaScript -->
+        </div>
+        <p><b>Mint a sprite for free!</b><br />
+            We pay the gas fees. Just connect your wallet and click <b>Mint</b>.<br /><br />
+            <span>Wallet Address: </span><span id="wallet-address">Not connected</span>
+        </p>
+        <div class="buttons">
+            <button id="connect-wallet">Connect Wallet</button>
+            <button id="mint">Mint</button>
+            <button id="clear">Clear</button>
+        </div>
+        <div>
+            <h2>Recent Sprites</h2>
+            <table id="event-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Sprite</th>
+                        <th>Owner</th>
+                        <th>Last Transferred</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <script type="module" src="sprite-write.ts"></script>
+</body>
+
+</html>

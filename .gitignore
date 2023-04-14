@@ -1,0 +1,35 @@
+# build files
+dist
+artifacts
+cache
+
+# dependencies, cache, logs
+node_modules
+.parcel-cache
+yarn-error.log
+
+# OS files
+.DS_Store
+
+# ignore all dotfiles except the whitelisted ones
+.*
+!.gitignore
+!.nvmrc
+!.solhint.json
+!.eslintrc.json
+!.prettierrc
+
+.env
+coverage
+coverage.json
+typechain
+
+#Hardhat files
+cache
+artifacts
+
+# Config files
+deployment-config.*.js
+!deployment-config.template.js
+backend/spritewrite.json
+frontend/spritewrite.json

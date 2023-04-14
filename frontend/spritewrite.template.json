@@ -1,0 +1,5 @@
+{
+    "mbEndpoint": "https://<MultiBaas endpoint>",
+    "mbAPIKey": "<MultiBaas frontend API key - 'DAPP USER' PERMISSIONS ONLY, **DO NOT** USE AN ADMIN API KEY>",
+    "backendEndpoint": "http://localhost:6789"
+}

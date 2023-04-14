@@ -1,0 +1,30 @@
+{
+  "name": "sprite-write",
+  "version": "1.0.0",
+  "description": "Sprite Write is a sample DApp built on Curvegrid's MultiBaas blockchain middleware",
+  "author": "Curvegrid Inc.",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "rm -rf dist && parcel build index.html",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix"
+  },
+  "dependencies": {
+    "@curvegrid/multibaas-sdk": "^1.0.0-beta1",
+    "axios": "^1.3.5",
+    "ethers": "^5.6.0"
+  },
+  "devDependencies": {
+    "@types/browser-sync": "^2.26.16",
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "@typescript-eslint/parser": "^5.58.0",
+    "browser-sync": "^2.27.9",
+    "buffer": "^5.5.0",
+    "eslint": "^8.38.0",
+    "parcel": "^2.8.3",
+    "process": "^0.11.10",
+    "typescript": "^4.6.2"
+  }
+}

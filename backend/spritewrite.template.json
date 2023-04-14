@@ -1,0 +1,9 @@
+{
+    "multibaas": {
+        "endpoint": "https://<MultiBaas endpoint>",
+        "apiKey": "<MultiBaas backend API key - MUST HAVE 'ADMIN' PERMISSIONS IN ORDER TO MINT>",
+        "hsmAddress": "<HSM address>"
+    },
+    "bind": ":6789",
+    "serveFiles": false
+}

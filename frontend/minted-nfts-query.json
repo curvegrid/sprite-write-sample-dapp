@@ -1,0 +1,74 @@
+{
+    "order": "DESC",
+    "events": [
+        {
+            "filter": {
+                "rule": "And",
+                "children": [
+                    {
+                        "value": "sprite_write",
+                        "operator": "Equal",
+                        "fieldType": "contract_address_label"
+                    }
+                ]
+            },
+            "select": [
+                {
+                    "name": "tokenId",
+                    "type": "input",
+                    "alias": "token_id",
+                    "inputIndex": 1
+                },
+                {
+                    "name": "colors",
+                    "type": "input",
+                    "aggregator": "last",
+                    "inputIndex": 2
+                }
+            ],
+            "eventName": "MintedSprite(address,uint256,uint8[256])"
+        },
+        {
+            "filter": {
+                "rule": "And",
+                "children": [
+                    {
+                        "value": "sprite_write",
+                        "operator": "Equal",
+                        "fieldType": "contract_address_label"
+                    }
+                ]
+            },
+            "select": [
+                {
+                    "name": "to",
+                    "type": "input",
+                    "alias": "owner",
+                    "aggregator": "last",
+                    "inputIndex": 1
+                },
+                {
+                    "name": "tokens",
+                    "type": "input",
+                    "alias": "token_id",
+                    "inputIndex": 2
+                },
+                {
+                    "name": "triggered_at",
+                    "type": "triggered_at",
+                    "alias": "timestamp",
+                    "aggregator": "last"
+                },
+                {
+                    "name": "tx_hash",
+                    "type": "tx_hash",
+                    "alias": "tx_hash",
+                    "aggregator": "last"
+                }
+            ],
+            "eventName": "Transfer(address,address,uint256)"
+        }
+    ],
+    "groupBy": "token_id",
+    "orderBy": "timestamp"
+}
